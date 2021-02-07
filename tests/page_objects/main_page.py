@@ -20,3 +20,13 @@ def go_to_login_page(driver_instance):
     elem.click()
 
 
+def add_item_to_cart(driver_instance):
+    elem = wait_for_visibility_of_element_xpath(driver_instance, add_hoodie_to_cart)
+    elem.click()
+
+
+def go_to_cart(driver_instance):
+    wait_for_visibility_of_element_xpath(driver_instance, go_to_cart_under_item)
+    elem = driver_instance.find_element_by_xpath(go_to_cart_under_item)
+    elem.click()
+

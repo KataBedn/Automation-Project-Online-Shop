@@ -1,6 +1,6 @@
 from tests.helpers.support_functions import *
 from tests.helpers.DataGenerator import *
-from time import sleep
+
 
 username = 'username'
 password = 'password'
@@ -31,6 +31,7 @@ def correct_login(driver_instance):
     elem1.send_keys(proper_password1)
     elem2 = driver_instance.find_element_by_xpath(login_button)
     elem2.click()
+
 
 def incorrect_login(driver_instance):
     elem = driver_instance.find_element_by_id(username)
